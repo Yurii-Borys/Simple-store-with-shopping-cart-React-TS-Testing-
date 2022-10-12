@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Apple MacBook",
+        "price": 1000.99,
+        "imgUrl": "/images/Apple.png"
+    },
+    {
+        "id": 2,
+        "name": "Dell Ispirion",
+        "price": 899.99,
+        "imgUrl": "/images/Dell.png"
+    },
+    {
+        "id": 3,
+        "name": "Acer CONS",
+        "price": 599.99,
+        "imgUrl": "/images/Acer.png"
+    },
+    {
+        "id": 4,
+        "name": "Leader Resistance",
+        "price": 399.99,
+        "imgUrl": "/images/Resistence.png"
+    },
+    {
+        "id": 5,
+        "name": "HP Pavilion",
+        "price": 799.99,
+        "imgUrl": "/images/HP.png"
+    },
+    {
+        "id": 6,
+        "name": "Leader Companion",
+        "price": 499.99,
+        "imgUrl": "/images/Leader.png"
+    },
+    {
+        "id": 7,
+        "name": "Lenovo Legion",
+        "price": 899.99,
+        "imgUrl": "/images/Lenovo.png"
+    }
+]

@@ -1,6 +1,18 @@
+import StoreItems from "../data/items.json"
+import StoreItem from "../components/StoreItem"
+
 function Store() {
     return (
-        <h1>Store</h1>
+        <div className="row g-1">
+            {StoreItems.map(item =>
+                <StoreItem
+                    key={item.id}
+                    id={item.id}
+                    name={item.name}
+                    price={item.price}
+                    imgUrl={item.imgUrl}
+                />)}
+        </div>
     )
 }
 export default Store;

@@ -3,7 +3,7 @@ import StoreItem from "../components/StoreItem"
 
 function Store() {
     return (
-        <div className="row g-1">
+        <div className="row g-3">
             {StoreItems.map(item =>
                 <StoreItem
                     key={item.id}

@@ -29,7 +29,7 @@ function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
                                 onClick={() => increaseCartQuantity(id)}
                             >+
                             </Button>
-                            <div className="col-3"><span>{quaintity} in cart</span></div>
+                            <div className="col-4"><span>{quaintity} in cart</span></div>
                             <Button
                                 className="col btn btn-primary"
                                 size="sm"

@@ -1,6 +1,8 @@
 import { Offcanvas } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShopingCartContext"
 import CartItem from "../components/CartItem"
+import { formatCurrency } from "../utilities/formatCurrency";
+import StoreItems from "../data/items.json"
 
 function ShoppingCart({ isOpeningCart }: { isOpeningCart: boolean }) {
     const { closeCart, cartItems } = useShoppingCart();
@@ -11,12 +13,19 @@ function ShoppingCart({ isOpeningCart }: { isOpeningCart: boolean }) {
             </Offcanvas.Header>
             <Offcanvas.Body>
                 {
-                    cartItems.map(item => <div className="row align-items-center p-3">
+                    cartItems.length > 0 ? cartItems.map(item => <div className="row align-items-center p-3">
                         <CartItem key={item.id} {...item} />
-                    </div>)
+                    </div>) : <span> Your cart is empty.</span>
+                }
+                {
+                    cartItems.length > 0 && <div className="fs-5 text-end">
+                        Total: {formatCurrency(cartItems.reduce((total, cartItem) => {
+                            const item = StoreItems.find(i => i.id === cartItem.id)
+                            return total + (item?.price || 0) * cartItem.quantity
+                        }, 0))}
+                    </div>
                 }
             </Offcanvas.Body>
-            {/* TODO: implement  total count*/}
         </Offcanvas>
     )
 }
